@@ -26,14 +26,16 @@ class SLL {
   }
 
   // big O n
-  // remove(node){
-  //   if(!(node instanceof SLL))
-  //     return null;
-  //   this.node = node;
-  //
-  //   return;
-  //
-  // }
+  remove(node){
+    if(!(node instanceof SLL))
+      return null;
+    this.node = node;
+    node.val = node.next.val;
+    node.next = node.next.next;
+
+    return;
+
+  }
 
   // big 0 is 2n
   reverse() {
