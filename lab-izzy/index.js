@@ -4,13 +4,12 @@ class SLL {
   constructor(val) {
     this.value = val;
     this.next = null;
-    this.head = null;
   }
 
   // big O n
   appendNode(node) {
     if(!(node instanceof SLL))
-    return null;
+      return null;
     if(!this.next) {
       this.next = node;
       return;
@@ -27,19 +26,19 @@ class SLL {
   }
 
   // big O n
-  removeNode(node){
-    if(!(node instanceof SLL))
-      return null;
-    this.node = node;
-
-    return;
-
-  }
+  // remove(node){
+  //   if(!(node instanceof SLL))
+  //     return null;
+  //   this.node = node;
+  //
+  //   return;
+  //
+  // }
 
   // big 0 is 2n
-  reverseNode(head) {
-    let current = head;
-    let prevent = null;
+  reverse() {
+    let current = this;
+    let previous = null;
 
     while(current) {
       let next = current.next;
@@ -49,6 +48,6 @@ class SLL {
     }
     return previous;
   }
-
+}
 
 module.exports = SLL;
