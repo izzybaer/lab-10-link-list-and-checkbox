@@ -57,16 +57,16 @@ describe('testing linked list methods', () => {
     it('should return null as the value for the next of head after removing all nodes besides the head', () => {
       let head = new SLL(5);
       head.appendNode(new SLL(12));
-      head.remove(head.next);
-      expect(head.next.value).toEqual(null);
+      head.remove(head);
+      expect(head.next).toEqual(null);
     });
     it('should expect 21 as the value of the third node after removing 16', () => {
       let head = new SLL(5);
+      console.log(head);
       head.appendNode(new SLL(12));
       head.appendNode(new SLL(16));
       head.appendNode(new SLL(21));
-      let thirdNode = head.next.next;
-      head.remove(thirdNode);
+      head.remove(head);
       expect(head.next.next.value).toEqual(21);
     });
     // it('should return null as the value for the next of the last node', () => {

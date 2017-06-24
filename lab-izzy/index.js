@@ -30,7 +30,7 @@ class SLL {
     if(!(node instanceof SLL))
       return null;
     this.node = node;
-    node.val = node.next.val;
+    node.val = node.val;
     node.next = node.next.next;
 
     return;
