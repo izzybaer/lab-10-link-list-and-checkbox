@@ -69,9 +69,13 @@ describe('testing linked list methods', () => {
       head.remove(head);
       expect(head.next.next.value).toEqual(21);
     });
-    // it('should return null as the value for the next of the last node', () => {
-    //   let head = new SLL(5);
-    //   head.
-    // });
+    it('should return null as the value for the next of the last node', () => {
+      let head = new SLL(5);
+      head.appendNode(new SLL(12));
+      head.appendNode(new SLL(16));
+      head.appendNode(new SLL(21));
+      head.remove(head);
+      expect(head.next.next.next).toEqual(null);
+    });
   });
 });
